@@ -61,7 +61,7 @@ const Sidebar = () => {
                         <MdAssignment className="icon" /> <span>Course</span>
                     </Link>
                     <Link to="/application" className={location.pathname === "/application" ? "active-link" : ""}>
-                        <BiSolidTruck className="icon" /> <span>Application</span>
+                        <BiSolidTruck className="icon" /> <span>Profile</span>
                     </Link>
                     <Link to="/result" className={location.pathname === "/result" ? "active-link" : ""}>
                         <FaUndo className="icon" /> <span>Result</span>
@@ -71,9 +71,6 @@ const Sidebar = () => {
 
              {/*Help & Logout at the bottom */}
             <div className="sidebar-footer nav">
-                {/*<Link to="/help" className={location.pathname === "/help" ? "active-link" : ""}>*/}
-                {/*    <AiOutlineExclamationCircle className="icon" /> <span>Help</span>*/}
-                {/*</Link>*/}
                 <Link to="/signin" style={{ color: "var(--error)" }} onClick={handleLogout} className={location.pathname === "/signin" ? "active-link" : ""}>
                     <LuLogOut className="icon" /> <span>Logout</span>
                 </Link>
