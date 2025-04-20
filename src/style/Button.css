@@ -1,0 +1,132 @@
+@import url("../style/MasterPage.css");
+
+/* Base Button Styles */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    /* Size Variants */
+    .btn.large {
+        padding: 12px 24px;
+        font-size: var(--font-body4);
+    }
+
+    .btn.small {
+        padding: 6px 18px;
+        font-size: var(--font-body4);
+    }
+
+    /* Primary Button */
+    .btn.primary {
+        background-color: var(--primary);
+        color: var(--white);
+        border: none;
+    }
+
+        .btn.primary:hover {
+            background-color: var(--secondary1);
+        }
+
+        .btn.primary.disabled {
+            background-color: var(--gray-6);
+            cursor: not-allowed;
+        }
+
+    /* Secondary Button */
+    .btn.secondary {
+        background-color: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+    }
+
+        .btn.secondary:hover {
+            color: var(--secondary1);
+            border: 2px solid var(--secondary1);
+        }
+
+        .btn.secondary.disabled {
+            border-color: var(--gray-6);
+            color: var(--gray-6);
+            cursor: not-allowed;
+        }
+
+    /* Tertiary Button */
+    .btn.tertiary {
+        background-color: transparent;
+        color: var(--primary);
+        border: none;
+    }
+
+        .btn.tertiary:hover {
+            color: var(--secondary1);
+            text-decoration: underline;
+        }
+
+        .btn.tertiary.disabled {
+            color: var(--gray-6);
+            cursor: not-allowed;
+        }
+
+    /* Black Button */
+    .btn.black {
+        background-color: var(--black);
+        color: var(--white);
+        border: none;
+    }
+
+        .btn.black:hover {
+            background-color: var(--gray-2);
+        }
+
+        .btn.black.disabled {
+            background-color: var(--gray-6);
+            cursor: not-allowed;
+        }
+
+    /* Icon Only Button */
+    .btn.icon-only {
+        background-color: var(--black);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        //line-height: 40px; /* Ensures perfect alignment */
+        padding: 0; /* Removes unwanted spacing */
+        aspect-ratio: 1 / 1; /* Ensures a perfect circle */
+    }
+
+        .btn.icon-only:hover {
+            background-color: var(--gray-2);
+        }
+
+        .btn.icon-only.disabled {
+            background-color: var(--gray-6);
+            cursor: not-allowed;
+        }
+
+        /* Icon Styles */
+        .btn.icon-only .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            //line-height: 1;
+        }
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}

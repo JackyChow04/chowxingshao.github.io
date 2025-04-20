@@ -9,6 +9,17 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
 /* Typography System */
 
 /* Color Variables*/
@@ -143,42 +154,6 @@ html, body {
     overflow: hidden;
 }
 
-
-
-/* Splash Layout */
-
-.splash-layout {
-    display: flex;
-    height: 97vh;
-    width: 98vw;
-    padding: 10px;
-    overflow: hidden;
-    overflow-y: hidden;
-}
-
-.splash-left {
-    flex: 1;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.splash-right {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; /* or 'contain' depending on your design */
-
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    overflow: hidden; /* Makes sure content + bg respects border radius */
-    border-radius: 20px;
-    background-clip: border-box;
-}
-
 /* -----Sidebar----- */
 
 .sidebar {
@@ -284,11 +259,6 @@ html, body {
     justify-content: center;
     gap: 15px;
 }
-
-.header-content{
-    margin: 0;
-}
-
 .header h3 {
     color: var(--primary);
     display: flex;

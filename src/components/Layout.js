@@ -1,19 +1,18 @@
-//Overall layout of all pages (Master Page)
-
-
 import { Outlet } from "react-router-dom";
 import React from "react";
 
-//components
-import Sidebar from "../components/Sidebar";
+// components
+import AdminSidebar from "../components/AdminSidebar";
+import StudentSidebar from "../components/StudentSidebar";
 
-//css
-import "../style/MasterPage.css"
+// css
+import "../style/MasterPage.css";
 
-const Layout = () => {
+// expect props like: <Layout role="admin" /> or <Layout role="student" />
+const Layout = ({ role }) => {
     return (
         <div className="layout">
-            <Sidebar />
+            {role === "admin" ? <AdminSidebar /> : <StudentSidebar />}
             <div className="main-content-wrapper">
                 <div className="main-content">
                     <Outlet /> {/* Page content will be rendered here */}
@@ -24,4 +23,3 @@ const Layout = () => {
 };
 
 export default Layout;
-

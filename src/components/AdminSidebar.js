@@ -22,19 +22,19 @@ const Sidebar = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    //// Retrieve the username from localStorage when the component mounts
-    //useEffect(() => {
-    //    const user = JSON.parse(localStorage.getItem("loggedInUser"));
-    //    if (user && user.userName) {
-    //        setUsername(user.userName);
-    //    } else {
-    //        setUsername("Guest"); // Fallback if no user is logged in
-    //    }
-    //}, []);
-
+    // Retrieve the username from localStorage when the component mounts
+    useEffect(() => {
+        const user = JSON.parse(localStorage.getItem("loggedInUser"));
+        if (user && user.userName) {
+            setUsername(user.userName);
+        } else {
+            setUsername("Guest"); // Fallback if no user is logged in
+        }
+    }, []);
 
     const handleLogout = async (event) => {
-        
+        localStorage.removeItem("loggedInUser");
+        navigate("/signin");
     };
 
     return (
@@ -54,17 +54,14 @@ const Sidebar = () => {
              {/*Pages Navigation */}
             <div className="sidebar-nav">
                 <div className="nav-section nav">
-                    <Link to="/student" className={location.pathname === "/student" ? "active-link" : ""}>
+                    <Link to="admin/manage-student" className={location.pathname === "admin/manage-student" ? "active-link" : ""}>
                         <FaClock className="icon" /> <span>Student</span>
                     </Link>
-                    <Link to="/course" className={location.pathname === "/course" ? "active-link" : ""}>
+                    <Link to="admin/manage-course" className={location.pathname === "/manage-course" ? "active-link" : ""}>
                         <MdAssignment className="icon" /> <span>Course</span>
                     </Link>
-                    <Link to="/application" className={location.pathname === "/application" ? "active-link" : ""}>
-                        <BiSolidTruck className="icon" /> <span>Profile</span>
-                    </Link>
-                    <Link to="/result" className={location.pathname === "/result" ? "active-link" : ""}>
-                        <FaUndo className="icon" /> <span>Result</span>
+                    <Link to="admin/manage-application" className={location.pathname === "/manage-application" ? "active-link" : ""}>
+                        <BiSolidTruck className="icon" /> <span>Application</span>
                     </Link>
                 </div>
             </div>

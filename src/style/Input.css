@@ -1,0 +1,137 @@
+@import url("../style/MasterPage.css");
+
+/* Input Wrapper */
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    //width: 100%;
+    //margin-bottom: 15px;
+}
+
+/* Input Label */
+.input-label {
+    font-size: 14px;
+}
+
+/* Input Container */
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 0.1px solid var(--gray-6);
+    border-radius: 12px;
+    padding: 8px;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Input Field */
+.input-field {
+    flex: 1;
+    border: none;
+    outline: none;
+    //font-size: 16px;
+    background: transparent;
+    padding: 4px;
+    margin: 0;
+}
+
+/* Input Icon */
+.input-icon {
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+/* States */
+.input-wrapper.default .input-container {
+    border-color: var(--gray-6);
+}
+
+.input-wrapper.error .input-container {
+    border-color: var(--error);
+    background-color: #ffe6e6;
+}
+
+.input-wrapper.success .input-container {
+    border-color: var(--success);
+    background-color: #e6ffe6;
+}
+
+.input-wrapper.warning .input-container {
+    border-color: orange;
+    background-color: #fff4e6;
+}
+
+.input-wrapper.loading .input-container {
+    border-color: #ffa500;
+}
+
+/* Focused input container */
+.input-wrapper.focused .input-container {
+    border-color: var(--secondary1);
+    box-shadow: 0 0 4px var(--secondary1);
+    transition: box-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.input-wrapper.hovered .input-container {
+    border-color: var(--primary);
+    box-shadow: 0 0 4px var(--primary);
+    transition: box-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+/* If the input inside is disabled, change the whole container */
+.input-container:has(input:disabled) {
+    background-color: var(--gray-6);
+    //border-color: var(--gray-6);
+    border: 0px;
+    cursor: not-allowed;
+    color: var(--gray-5);
+}
+
+    .input-container:has(input:disabled) .input-field {
+        color: var(--gray-1)
+    }
+
+
+.helper-text {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    //margin-top: 4px;
+    gap: 5px;
+    min-height: 10px;
+}
+
+.helper-icon {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+}
+
+/* State-based helper text colors */
+.helper-text.default {
+    display: none;
+}
+
+.helper-text.error {
+    color: var(--error);
+}
+
+.helper-text.success {
+    color: var(--success);
+}
+
+.helper-text.warning {
+    color: var(--warning);
+}
+
+.helper-text.loading {
+    color: var(--gray5);
+}
+
+.helper-text.hidden {
+    display: none;
+}
