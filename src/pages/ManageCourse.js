@@ -5,7 +5,7 @@ import Header from "../components/Header";
 
 // css
 
-const Student = () => {
+const ManageCourse = () => {
     return (
         <div className="main-page">
             <Header
@@ -19,4 +19,4 @@ const Student = () => {
     );
 };
 
-export default Student;
+export default ManageCourse;

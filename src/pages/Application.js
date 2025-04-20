@@ -5,11 +5,11 @@ import Header from "../components/Header";
 
 // css
 
-const ManageApplication = () => {
+const Application = () => {
     return (
         <div className="main-page">
             <Header
-                pageName="My Application Page"
+                pageName="Application Page"
             />
 
 
@@ -19,4 +19,4 @@ const ManageApplication = () => {
     );
 };
 
-export default ManageApplication;
+export default Application;

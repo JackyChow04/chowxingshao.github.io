@@ -39,7 +39,7 @@ const Sidebar = () => {
 
     return (
         <div className="sidebar">
-             Sidebar Header 
+             {/*Sidebar Header */}
             <div className="sidebar-header nav">
                 <Link to="/" className={location.pathname === "/" ? "active-link" : ""}>
                     <BsCodeSquare className="header body-1-bold" /> <span>TARUMT</span>
@@ -51,7 +51,7 @@ const Sidebar = () => {
 
             <div className="line"></div>
 
-             Pages Navigation 
+             {/*Pages Navigation */}
             <div className="sidebar-nav">
                 <div className="nav-section nav">
                     <Link to="/student" className={location.pathname === "/student" ? "active-link" : ""}>
@@ -69,7 +69,7 @@ const Sidebar = () => {
                 </div>
             </div>
 
-             Help & Logout at the bottom 
+             {/*Help & Logout at the bottom */}
             <div className="sidebar-footer nav">
                 {/*<Link to="/help" className={location.pathname === "/help" ? "active-link" : ""}>*/}
                 {/*    <AiOutlineExclamationCircle className="icon" /> <span>Help</span>*/}

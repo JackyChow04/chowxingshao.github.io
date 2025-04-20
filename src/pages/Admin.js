@@ -9,7 +9,7 @@ const Admin = () => {
     return (
         <div className="main-page">
             <Header
-                pageName="Student Page"
+                pageName="Admin Page"
             />
 
         </div>
